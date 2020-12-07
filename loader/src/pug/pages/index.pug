@@ -1,4 +1,6 @@
 extends ../layouts/col-1/col-1.pug
+include ../mixins/_loader.pug
+
 block vars
   - levelAssets = "";
   - pageName = "Index";
@@ -7,4 +9,6 @@ block slot-1
   append script
     script(src=resourceLocator+"js/customloader.js")
     //- script(src=resourceLocator+"js/ejemplo.js")
-    include ../components/loaderCustomize.pug
+    +_loader({
+      class: "loaderClassSpecial"
+    })
