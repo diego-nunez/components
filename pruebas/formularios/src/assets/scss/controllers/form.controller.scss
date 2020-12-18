@@ -1,0 +1,337 @@
+@import '../utils/fonts.scss';
+@include fonts-form1();
+@import '../components/_radio_checkbox';
+@import '../utils/variables.scss';
+
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.mb-17{
+    margin-bottom: 17px;;
+}
+.CM-header__header--bg{
+    background: url('../../img/header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 222px;
+    font-size: 0;
+}
+
+.CM-tabs{
+    &__header{
+        color: #222222;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 15px 15px -10px rgba(6, 54, 119, 0.2);
+        transform: translateY(-50%);
+        overflow: hidden;
+        text-align: center;
+        font-family: 'CrosstenSemiBold';
+        &--title{
+            background: #f8f8f8;
+            padding: 12px 0;
+            h2{
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 24px;
+            }
+            span{
+                display: inline-block;
+                vertical-align: middle;
+                font-family: 'CrosstenBook';
+                font-size: 12px;
+            }
+        }
+        &--list{
+            ul{
+                font-size: 0;
+                width: 90%;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            li{
+                display: inline-block;
+                width: 33%;
+                a{
+                    &:not(.CM-tabs__button--active){
+                        font-size: 19px;
+                    }
+                    padding: 13px 0;
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+                    text-decoration: none;
+                    &::after{
+                        content: ' ';
+                        display: block;
+                        width: 98%;
+                        height: 4px;
+                        border-radius: 3px;
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    &__body{
+        display: flex;
+        flex-wrap: wrap;
+        &--right{
+            flex-basis: 100%;
+            order: 2;
+            form{
+                
+                @media (min-width: 790px) {
+                    max-width: 665px;
+                    width: 95%;
+                }
+                fieldset{
+                    margin-bottom: 32px;
+                }
+            }
+        }
+        &--left{
+            flex-basis: 100%;
+            order: 1;
+        }
+        @media (min-width: 790px) {
+            &--right{
+                flex-basis: 66%;
+                order: 1;
+            }
+            &--left{
+                flex-basis: 34%;
+                order: 2;
+            }
+        }
+    }
+    &__button{
+        &--active{
+            font-size: 16px;
+            img, span{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            img{
+                width: 20px;
+            }
+            span{
+                line-height: 1;
+                padding-top: 5px;
+                margin-left: 10px;
+            }
+        }
+        &--green{
+            color: #4f921c;
+            &::after{
+                background: #66aa27;
+            }
+        }
+        &--purple{
+            color: #76045e;
+            &::after{
+
+                background: #7a035e;
+            }
+        }
+        &--gray{
+            color: #757575;
+            &::after{
+
+                background: #f8f8f8;
+            }
+        }
+    }
+}
+.CM-form{
+    &__column{
+        &--container{
+
+            font-size: 0;
+        }
+        &--right, &--left{
+            display: inline-block;
+            width: 50%;
+        }
+        &--left{
+            text-align: right;
+        }
+    }
+    &__input{
+        &--label{
+            font-family: 'CrosstenSemiBold';
+            font-size: 14px;
+            font-weight: 100;
+            color: #222222;
+            display: inline-block;
+            width: 100%;
+            max-width: 96%;
+            text-align: left;
+        }
+        &--text{
+            display: inline-block;
+            width: 100%;
+            max-width: 88%;
+            text-align: left;
+            padding: 13px 4%;
+            margin-top: 6px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: solid 1px #757575;
+            &:focus{
+                border: solid 1px #7a035e;
+                outline: 0;
+            }
+        }
+    }
+    &__delivery--inputs{
+        li{
+            display: inline-block;
+            &:first-child{
+                margin-right: 24px;
+            }
+        }
+        @include check-styles("radio",$radio-styles, $radio-checked-styles);
+        .CE-check__label{
+            span, img{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            span{
+                font-family: 'CrosstenBook';
+                width: 85px;
+                margin: 3px 10px 0 8px;
+            }
+        }
+        .CM-form__radio{
+            border-radius: 6px;
+            box-shadow: 0 15px 15px -10px rgba(122, 3, 94, 0.2);
+            background-color: #ffffff;
+            padding: 10px 14px 6px 5px;
+            display: inline-block;
+            &.CE-check--checked{
+                border: solid 1px #db0c6d;
+                color: #db0c6d;
+            }
+        }
+    }
+    &__button{
+        font-size: 16px;
+        padding: 16px 32px;
+        font-weight: bold;
+        border-radius: 6px;
+        &--container{
+            li{
+                display: inline-block;
+                &:first-child{
+                    margin-right: 24px;
+                }
+            }
+        }
+        &--disabled{
+            color: #757575;
+            background: #d8d8d8;
+        }
+        &--cancel{
+            background: #f8f8f8;
+            color: #ff1169;
+            box-shadow: 0 5px 5px -4px rgba(6, 54, 119, 0.3);
+        }
+    }
+    &__section{
+        &--title{
+            font-family: 'CrosstenSemiBold';
+            font-size: 21px;
+            margin-bottom: 16px;
+            &-B{
+                font-family: 'CrosstenBook';
+                font-size: 21px;
+                margin-bottom: 16px; 
+            }
+        }
+        &--info{
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            margin-bottom: 16px;
+            color: #222222;
+        }
+        &--small{
+            font-family: 'CrosstenBook';
+            font-size: 12px;
+            color: #757575;
+            margin-bottom: 10px;
+            display: block;
+        }
+    }
+}
+
+.CM-summary{
+    background: #f8f8f8;
+    padding: 24px;
+    border-radius: 16px;
+    color: #222222;
+    &__title{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 16px;
+        font-family: 'CrosstenSemiBold';
+    }
+    &__info{
+        ul{
+            width: 100%;
+            margin-bottom: 32px;
+            li{
+                font-size: 0;
+                margin-bottom: 16px;
+                &:first-child, &:last-child{
+                    font-family: 'CrosstenSemiBold';
+                }
+                &:nth-child(2), &:nth-child(3){
+                    font-family: 'CrosstenBook';
+                }
+            }
+        }
+        &--left{
+            display: inline-block;
+            width: 80%;
+            text-align: left;
+            font-size: 16px;
+            vertical-align: middle;
+        }
+        &--right{
+            display: inline-block;
+            width: 20%;
+            text-align: right;
+            font-size: 16px;
+            vertical-align: middle;
+        }
+        .CM-form__button{
+            display: block;
+            margin: 0 auto 32px;
+        }
+        .CM-form__textarea{
+            width: 100%;
+            margin-top: 8px;
+            border-radius: 8px;
+            border: solid 1px #757575;
+            background: #f8f8f8;
+            padding: 16px 13px;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+        }
+    }
+}

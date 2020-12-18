@@ -1,0 +1,59 @@
+@mixin fonts-form1 {
+    @font-face {
+        font-family: 'CrosstenBold';
+        src: url('../../fonts/CrosstenBold/CrosstenBold.eot');
+        src: url('../../fonts/CrosstenBold/CrosstenBold.woff2') format('woff2'),
+             url('../../fonts/CrosstenBold/CrosstenBold.woff') format('woff'),
+             url('../../fonts/CrosstenBold/CrosstenBold.ttf') format('truetype'),
+             url('../../fonts/CrosstenBold/CrosstenBold.svg#CrosstenBold') format('svg');
+    }
+    @font-face {
+        font-family: 'CrosstenSemiBold';
+        src: url('../../fonts/CrosstenSemiBold/CrosstenSemiBold.eot');
+        src: url('../../fonts/CrosstenSemiBold/CrosstenSemiBold.woff2') format('woff2'),
+             url('../../fonts/CrosstenSemiBold/CrosstenSemiBold.woff') format('woff'),
+             url('../../fonts/CrosstenSemiBold/CrosstenSemiBold.ttf') format('truetype'),
+             url('../../fonts/CrosstenSemiBold/CrosstenSemiBold.svg#CrosstenSemiBold') format('svg');
+    }
+    @font-face {
+        font-family: 'CrosstenBook';
+        src: url('../../fonts/CrosstenBook/CrosstenBook.eot');
+        src: url('../../fonts/CrosstenBook/CrosstenBook.woff2') format('woff2'),
+             url('../../fonts/CrosstenBook/CrosstenBook.woff') format('woff'),
+             url('../../fonts/CrosstenBook/CrosstenBook.ttf') format('truetype'),
+             url('../../fonts/CrosstenBook/CrosstenBook.svg#CrosstenBook') format('svg');
+    }
+}
+
+@mixin fonts-unitec {
+    @font-face {
+        font-family: 'GothamHTFBold';
+        src: url('../../fonts/GothamHTFBold/GothamHTFBold.eot');
+        src: url('../../fonts/GothamHTFBold/GothamHTFBold.eot') format('embedded-opentype'),
+             url('../../fonts/GothamHTFBold/GothamHTFBold.woff2') format('woff2'),
+             url('../../fonts/GothamHTFBold/GothamHTFBold.woff') format('woff'),
+             url('../../fonts/GothamHTFBold/GothamHTFBold.ttf') format('truetype'),
+             url('../../fonts/GothamHTFBold/GothamHTFBold.svg#GothamHTFBold') format('svg');
+    }
+
+    @font-face {
+        font-family: 'GothamHTFMedium';
+        src: url('../../fonts/GothamHTFMedium/GothamHTFMedium.eot');
+        src: url('../../fonts/GothamHTFMedium/GothamHTFMedium.eot') format('embedded-opentype'),
+             url('../../fonts/GothamHTFMedium/GothamHTFMedium.woff2') format('woff2'),
+             url('../../fonts/GothamHTFMedium/GothamHTFMedium.woff') format('woff'),
+             url('../../fonts/GothamHTFMedium/GothamHTFMedium.ttf') format('truetype'),
+             url('../../fonts/GothamHTFMedium/GothamHTFMedium.svg#GothamHTFMedium') format('svg');
+    }
+
+    @font-face {
+        font-family: 'GothamHTFBook';
+        src: url('../../fonts/GothamHTFBook/GothamHTFBook.eot');
+        src: url('../../fonts/GothamHTFBook/GothamHTFBook.eot') format('embedded-opentype'),
+             url('../../fonts/GothamHTFBook/GothamHTFBook.woff2') format('woff2'),
+             url('../../fonts/GothamHTFBook/GothamHTFBook.woff') format('woff'),
+             url('../../fonts/GothamHTFBook/GothamHTFBook.ttf') format('truetype'),
+             url('../../fonts/GothamHTFBook/GothamHTFBook.svg#GothamHTFBook') format('svg');
+    }
+    
+}

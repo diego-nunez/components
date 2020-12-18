@@ -1,0 +1,8 @@
+mixin _input(object)
+    label(for=object.id class=object.labelClass) !{object.labelText}
+    if(object.icon)
+        div(class=object.iconContainerClass)
+            input(type=object.type name=object.name id=object.id value=object.value class=object.inputClass placeholder=object.placeholder)
+            span(class=object.icon)
+    else
+        input(type=object.type name=object.name id=object.id value=object.value class=object.inputClass placeholder=object.placeholder)

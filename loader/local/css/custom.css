@@ -113,6 +113,10 @@ input, textarea {
   height: 100%;
 }
 
+.CE__loader--hidden {
+  display: none;
+}
+
 @-webkit-keyframes "CE__loader-dot1" {
   0% {
     -webkit-transform: scale(0);

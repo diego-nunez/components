@@ -1,0 +1,314 @@
+@import '../utils/fonts.scss';
+@include fonts-unitec();
+@import '../components/_radio_checkbox';
+@import '../components/_select';
+@import '../utils/variables.scss';
+
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #EBF3F8;
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+header{
+    background: #0D6FB8;
+    width: 100%;
+    height: 77px;
+}
+.container{
+    width: 90%;
+    max-width: 680px;
+    margin: 35px auto 72px;
+}
+
+.UN-section{
+    &__title{
+        h1{
+            font-family: 'GothamHTFBold';
+            font-size: 24px;
+            color: #0D6EBA;
+            text-align: center;
+            margin-bottom: 14px;
+        }
+        p{
+            font-family: 'GothamHTFBook';
+            font-size: 17px;
+            color: #505050;
+            text-align: center;
+        }
+    }
+}
+
+.UN-form{
+    &__container{
+        background: #fff;
+        box-shadow: 0px 0px 11px 0px rgba(176,211,235,1);
+        border-radius: 6px;
+        max-width: 422px;
+        margin: 50px auto 72px;
+        padding: 31px 28px 44px;
+        overflow: hidden;
+        position: relative;
+        &::before{
+            content: ' ';
+            width: 100%;
+            height: 9px;
+            background: #0D6EBA;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+    &__title{
+        text-align: center;
+        margin-bottom: 26px;
+        span{
+            display: block;
+            font-family: 'GothamHTFBold';
+            font-size: 24px;
+            color: #0D6EBA;
+        }
+    }
+    &__input{
+        &--special{
+            border: 1px solid #5EABE0;
+            border-radius: 6px;
+            height: 38px;
+            position: relative;
+            margin: 8px 0 0;
+        }
+        &--text{
+            background: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding:0 16px;
+            box-sizing: border-box;
+            outline: 0;
+            font-family: 'GothamHTFBook';
+            font-size: 15px;
+            &::placeholder{
+                opacity: .6;
+                color: #505050;
+            }
+        }
+        &--label{
+            position: absolute;
+            font-family: 'GothamHTFMedium';
+            z-index: 4;
+            font-size: 14px;
+            color: #0D6EBA;
+            background: white;
+            transform: translateY(-50%);
+            left: 10px;
+            padding: 0 6px;
+        }
+        
+    }
+    &__field{
+        margin-bottom: 22px;
+        @include check-styles("checkbox", $checkbox-styles, $checkbox-checked-styles);
+    }
+    &__checkbox{
+        .CE-check__label{
+            font-family: 'GothamHTFBook';
+            font-size: 15px;
+            color: #505050;
+        }
+        &--link{
+            font-family: 'GothamHTFMedium';
+            color: #003057;
+        }
+    }
+    &__textarea{
+        font-family: 'GothamHTFBook';
+        font-size: 15px;
+        color: #505050;
+        border: 1px solid #5EABE0;
+        padding: 10px 16px;
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 6px;
+        &--label{
+            display: block;
+            font-family: 'GothamHTFBook';
+            font-size: 15px;
+            color: #505050;
+            margin-bottom: 26px;
+        }
+    }
+    &__button{
+        width: 100%;
+        font-family: 'GothamHTFBold';
+        font-size: 15px;
+        color: #003053;
+        border-radius: 6px;
+        height: 46px;
+        background: #F68B1F;
+    }
+}
+
+.UN-input{
+    &__icon{
+        &--container{
+            .UN-form__input--text{
+                max-width: 90%;
+            }
+        }
+        &--password{
+            width: 10%;
+            display: block;
+            height: 38px;
+            position: absolute;
+            right: 0;
+            background: url('../../img/un/blind.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+    }
+}
+
+.UN-select{
+    font-family: 'GothamHTFBook';
+    font-size: 15px;
+    color: #505050;
+    border: 1px solid #5EABE0;
+    .CE-select{
+        &__label {
+            padding: 0 16px;
+            opacity: .6;
+        }
+        &__select--selected{
+            height: 28px;
+        }   
+    }
+    &__icon{
+        &--arrow{
+            background: url('../../img/un/arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.CE-select__float--active{
+        .CE-select{
+            &__label {
+                opacity: 1;
+            }
+        }
+    }
+    ul{
+        li{
+            padding: 3px 10px;
+        }
+    }
+}
+
+footer{
+    background: #fff;
+}
+
+.UN-footer{
+    &__social{
+        background: rgba(191, 191, 191, .25) ;
+        padding: 21px 0 25px;
+        p{
+            font-size: 22px;
+            color: #0D6EB8;
+            font-family: 'GothamHTFMedium';
+        }
+    }
+    &__info{
+        padding: 21px 0 64px;
+    }
+    &__container{
+        max-width: 1100px;
+        margin: 0 auto;
+        font-size: 0;
+    }
+    &--right{
+        width: 100%;
+        @media (min-width: 790px) {
+            width: 50%;
+        }
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &--left{
+        width: 100%;
+        @media (min-width: 790px) {
+            width: 50%;
+        }
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__list{
+        li{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &--social{
+            li{
+                width: 16.6%;
+                text-align: center;
+            }
+        }
+        &--links{
+            li{
+                width: 25%;
+                &:not(:first-child){
+                    a{
+                        text-align: center;
+                    }
+                }
+                &:not(:last-child){
+                    a{
+                        position: relative;
+                        &::after{
+                            content: ' ';
+                            width: 1px;
+                            height: 100%;
+                            background: rgba(13,110,184,.2);
+                            position: absolute;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+            a{
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                color:#0D6EB8;
+                text-decoration: none;
+                height: 39px;
+                line-height: 39px;
+                display: block;
+            }
+        }
+        &--security{
+            li{
+                width: 20%;
+            }
+        }
+    }
+    &__legal{
+        &--last{
+            padding-top: 25px;
+            p{
+                font-size: 11px;
+                font-family: 'GothamHTFBook';
+                color: #505050;
+                line-height: 1.8;
+            }
+        }
+    }
+}

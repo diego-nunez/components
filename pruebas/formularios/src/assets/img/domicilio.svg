@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43" height="40" viewBox="0 0 43 40">
+    <g fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <g>
+                <g>
+                    <g>
+                        <path fill="#FF8126" d="M34.335 0L32.528 1.079 30.721 0 29.516 1.079 27.107 0 24.697 1.079 22.288 0 19.878 1.079 17.469 0 15.059 1.079 12.65 0 10.24 1.079 7.831 0 5.421 1.079 5.421 29.138 29.516 29.138 35.54 29.138 35.54 1.079z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#FFA95C" d="M29.516 29.138L5.421 29.138 5.421 1.079 7.831 0 10.24 1.079 12.65 0 15.059 1.079 17.469 0 19.878 1.079 22.288 0 24.697 1.079 27.107 0 29.516 1.079z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#6F6571" d="M33.13 26.104L33.13 0.719 32.528 1.079 31.926 0.719 31.926 26.104 29.516 28.345 29.516 29.138 30.368 29.138 32.528 27.129 34.688 29.138 35.54 29.138 35.54 28.345z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#FFEFD3" d="M9.875 4.382L11.037 4.424 11.31 11.967 10.147 11.925z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75) rotate(-45 10.592 8.174)"/>
+                        <path fill="#FFEFD3" d="M11.806 3.518L12.996 3.549 13.207 11.139 12.017 11.107z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75) rotate(-24.463 12.506 7.328)"/>
+                        <path fill="#F9E9B9" d="M15.06 10.086v-.56c0-2.166 1.887-3.923 4.216-3.923s4.216 1.757 4.216 3.923v.56" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#DAD8DB" d="M0 24.095L9.036 24.095 9.036 31.94 0 31.94z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#ECEAEC" d="M4.217 24.095L9.036 24.095 9.036 31.94 4.217 31.94z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#FBE5D6" d="M9.036 30.819h3.011L15.06 32.5h6.636c.66 0 1.195-.498 1.195-1.112v-1.13h.612c.66 0 1.195-.497 1.195-1.111v-1.13h.01c.66 0 1.195-.497 1.195-1.111v-1.13h.01c.66 0 1.195-.498 1.195-1.112v-1.13h-8.434c1.331 0 2.41-1.003 2.41-2.24h-6.626l-3.012 3.922h-2.41v5.603z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#FEC9A3" d="M22.298 31.38h-6.636l-3.012-1.682H9.638v-4.482h-.602v5.603h3.011L15.06 32.5h6.636c.66 0 1.195-.498 1.195-1.112v-.156c-.18.097-.385.147-.592.147z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#ECEAEC" d="M14.457 15.69L20.481 15.69 20.481 19.052 14.457 19.052z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#DAD8DB" d="M19.276 15.69L19.276 17.931 14.457 17.931 14.457 19.052 20.481 19.052 20.481 15.69z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#F9E083" d="M21.685 10.086h-1.204v-.56c0-.62-.54-1.12-1.205-1.12s-1.205.5-1.205 1.12v.56h-1.205v-.56c0-1.238 1.08-2.242 2.41-2.242s2.41 1.004 2.41 2.242v.56z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#ECEAEC" d="M24.697 10.086c0 3.714-3.236 6.724-7.228 6.724-3.992 0-7.229-3.01-7.229-6.724h14.457z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                        <path fill="#DAD8DB" d="M23.392 10.086c-.426 2.34-2.146 4.3-4.527 5.153-2.381.854-5.07.477-7.074-.991 1.905 2.25 5.135 3.13 8.045 2.192 2.91-.938 4.861-3.489 4.861-6.354h-1.305z" transform="translate(-550 -650) translate(415 642) translate(135 8) translate(3.695 3.75)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

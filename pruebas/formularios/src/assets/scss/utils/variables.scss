@@ -1,0 +1,26 @@
+$radio-styles: (
+    "border" : 2px solid #db0c6d,
+    "width": 18px,
+    "height":18px,
+    "margin": 0px 0 0 10px,
+    "border-radius": 50%
+);
+$radio-checked-styles:(
+    "background": #db0c6d,
+    "width": 14px,
+    "height": 14px,
+    "border-radius": 50%
+);
+
+$checkbox-styles: (
+    "border" : 1px solid #5EABE0,
+    "width": 16px,
+    "height":16px,
+    "margin": 0 5px 0 0px,
+    "border-radius": 3px
+);
+$checkbox-checked-styles:(
+    "background": #0D6EBA,
+    "width": 10px,
+    "height": 10px
+);

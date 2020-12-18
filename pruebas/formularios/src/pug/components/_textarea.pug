@@ -1,0 +1,3 @@
+mixin _textarea(object)
+    label(for=object.id class=object.labelClass) !{object.text}
+    textarea(id=object.id name=object.name class=object.class placeholder=object.placeholder , cols="30", rows="10")

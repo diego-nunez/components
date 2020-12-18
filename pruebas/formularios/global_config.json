@@ -1,0 +1,30 @@
+{
+    "project":{
+        "name": "",
+        "folders":{
+            "dev":{
+                "name": "src",
+                "pug":{
+                    "pages":{},
+                    "components":{}
+                },
+                "assets":{
+                    "scss":{
+                        "type": "sass",
+                        "map": true
+                    },
+                    "js":{
+                        
+                    }, 
+                    "img":{}
+                }
+            },
+            "prod":{
+                "name": "dist"
+            }
+        },
+        "componentsConfig":{
+            "config": "https://raw.githubusercontent.com/rocioOrtiz/designSystem/main/modulesConfig.json"
+        }
+    }
+}
