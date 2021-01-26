@@ -1,23 +1,16 @@
-include components/_loader.pug
+extends layout/example
 include components/_input.pug
 include components/_radio_checks.pug
 include components/_textarea.pug
-
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-        link(rel="stylesheet", href="assets/css/controllers/default.controller.css")
-    body
-        ul.DS__container--assets
-            li {{[[link]]https://fonts.googleapis.com/css2?family=Raleway&display=swap"}}
-            li {{[[link]]assets/css/controllers/form.controller.css}}
-            li {{[[script]]assets/js/controllers/form.controller.js}}
-        header.CM-header__header--bg
-            h1 Tacos el corte 7
-        .container
+block vars
+    -
+        var externalResourceLink = [
+            {type: "link", resource:"https://fonts.googleapis.com/css2?family=Raleway&display=swap"},
+            {type: "link", resource:"assets/css/controllers/form.controller.css"},
+            {type: "script", resource:"assets/js/controllers/form.controller.js"}
+        ]
+block content
+    .container
             .CM-tabs__header
                 .CM-tabs__header--title
                     h2 Tacos el corte 7
@@ -40,102 +33,6 @@ html(lang="en")
                 .CM-tabs__body--right
                     form.CM-form(action="" method="")
                         fieldset
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
-                            img(src="assets/img/icon-step-done.svg", alt="")
                             p.CM-form__section--title Ingresa los siguientes datos de contacto
                             p.CM-form__section--info Recibirás una notificación por parte del restaurante para confirmarte 
                                 |cuando puedas pasar por tu pedido o puedas pasar a recogerlo. 
@@ -257,6 +154,37 @@ html(lang="en")
                                         type:"text",
                                         value:""
                                     })
+                        fieldset
+                            +_input({
+                                type:"file",
+                                name: "inputFileA",
+                                id:"inputFileA",
+                                labelClass:"CM-form__file--label",
+                                containerClass:"CM-form__file",
+                                resultsId:"#results",
+                                multiple: true
+                                })
+                                +set('inside')
+                                    span Selecciona tu archivo
+                                    img(src='assets/img/up-arrow.svg')
+                                +set('outside')
+                                    p#results
+                        
+                        fieldset
+                            +_input({
+                                type:"file",
+                                name: "inputFileB",
+                                id:"inputFileB",
+                                labelClass:"CM-form__file--label",
+                                containerClass:"CM-form__file",
+                                resultsId:".resultsB",
+                                template: "<strong>{{name}}</strong> <span>{{size}}</span>"
+                                })
+                                +set('inside')
+                                    span Selecciona tu archivo
+                                    img(src='assets/img/up-arrow.svg')
+                                +set('outside')
+                                    .resultsB
                                     
                         fieldset
                             ul.CM-form__button--container
@@ -304,8 +232,3 @@ html(lang="en")
                                         class:"CM-form__textarea",
                                         placeholder:"Comentario sobre agregar salsa, sin salsa el item X, sin cubiertos, etc."
                                     })
-        +_loader({
-            class: "loaderClassSpecial"
-        })
-        script(src="assets/js/controllers/default.controller.js")
-        //- script(src="assets/js/controllers/form.controller.js")

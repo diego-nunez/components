@@ -4,3 +4,11 @@
     display: none;
     visibility: hidden;
 }
+
+.CE{
+    &__element{
+        &--d-none{
+            display: none;
+        }
+    }
+}

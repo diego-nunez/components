@@ -1,0 +1,30 @@
+extends ../layout/example
+include ../components/_input.pug
+
+block vars
+    -
+        var externalResourceLink = [
+            {type: "link", resource:"https://fonts.googleapis.com/css2?family=Raleway&display=swap"},
+            {type: "link", resource:"assets/css/controllers/form.controller.css"},
+            {type: "script", resource:"assets/js/controllers/form.controller.js"}
+        ]
+block content
+    span prueba sdsd
+
+    +_input({
+        type:"file",
+        name: "inputFileA",
+        id:"inputFileA",
+        labelClass:"CM-form__file--label",
+        containerClass:"CM-form__file",
+        resultsId:"results"
+        })
+        +set('inside')
+            span Selecciona tu archivo
+            img(src='assets/img/up-arrow.svg')
+        +set('outside')
+            p#results
+    //- +_input({type:"file"})
+    //-     +set('inside')
+    //-         span pruwebasas inside89989
+    //-     +set('outside')

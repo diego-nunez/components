@@ -1,6 +1,6 @@
 import { select } from '../components/_select.js';
 import { radio_checkbox } from '../components/_radio_checkbox.js';
-console.log('explorer');
+
 select({
     "exclude": 'noSelected'
 });

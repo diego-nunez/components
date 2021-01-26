@@ -1,8 +1,29 @@
+mixin set(key)
+  - blocks[key] = this.block
+
 mixin _input(object)
-    label(for=object.id class=object.labelClass) !{object.labelText}
-    if(object.icon)
-        div(class=object.iconContainerClass)
-            input(type=object.type name=object.name id=object.id value=object.value class=object.inputClass placeholder=object.placeholder)
-            span(class=object.icon)
+
+    
+    if(object.type == 'file')
+        block
+        - var multiple = (object.multiple)? 'multiple':'false';
+        .CE-file(class=object.containerClass)
+            label(for=object.id class=object.labelClass data-result=object.resultsId)
+                .CE-file__inside(class=`${object.containerClass}--inside`)
+                    if blocks['inside']
+                        - blocks.inside()
+                    input(type="file" name=object.name id=object.id class="CE__element--d-none" multiple=multiple)
+                    if (object.template) 
+                        .CE-element__template.CE__element--d-none !{object.template}
+            if blocks['outside']
+                - blocks.outside()
     else
-        input(type=object.type name=object.name id=object.id value=object.value class=object.inputClass placeholder=object.placeholder)
+        label(for=object.id class=object.labelClass) !{object.labelText}
+        if(object.icon)
+            div(class=object.iconContainerClass)
+                input(type=object.type name=object.name id=object.id value=object.value class=object.inputClass placeholder=object.placeholder)
+                span(class=object.icon)
+        else
+            input(type=object.type name=object.name id=object.id value=object.value class=object.inputClass placeholder=object.placeholder)
+
+    

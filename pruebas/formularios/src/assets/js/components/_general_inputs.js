@@ -45,7 +45,7 @@ export function general_inputs(param) {
     class floatLabelFunctionalities{
         floatLabelFunctionality(element){
             var labelElement = element.querySelector('label'); 
-            console.log(labelElement);
+            
             labelElement.onclick = function(e){
                 var that = e.target;
                 console.log('click',that.tagName);

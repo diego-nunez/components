@@ -177,7 +177,7 @@ ul{
             color: #222222;
             display: inline-block;
             width: 100%;
-            max-width: 96%;
+            max-width: 88%;
             text-align: left;
         }
         &--text{
@@ -220,7 +220,6 @@ ul{
             box-shadow: 0 15px 15px -10px rgba(122, 3, 94, 0.2);
             background-color: #ffffff;
             padding: 10px 14px 6px 5px;
-            display: inline-block;
             &.CE-check--checked{
                 border: solid 1px #db0c6d;
                 color: #db0c6d;
@@ -273,6 +272,36 @@ ul{
             color: #757575;
             margin-bottom: 10px;
             display: block;
+        }
+    }
+    &__file{
+        &--label{
+            background: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 5px 15px;
+            border-radius: 8px;
+            border: 1px solid #a8a8a8;
+            height: 48px;
+            box-sizing: border-box;
+        }
+        &--inside{
+            span, img{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            span{
+                font-family: 'CrosstenSemiBold';
+                font-size: 14px;
+                font-weight: 100;
+                color: #222222;
+                margin-right: 10px;
+            }
+            img{
+                width: 30px;
+            }
         }
     }
 }
