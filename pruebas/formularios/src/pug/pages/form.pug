@@ -1,156 +1,147 @@
-include ../components/_loader.pug
+extends ../layout/example
 include ../components/_input.pug
 include ../components/_radio_checks.pug
-include ../components/_select.pug
 include ../components/_textarea.pug
+include ../components/_select.pug
+block vars
+    -
+        var externalResourceLink = [
+            {type: "link", resource:"https://fonts.googleapis.com/css2?family=Roboto&display=swap"},
+            {type: "link", resource:"assets/css/controllers/unitec.controller.css"},
+            {type: "script", resource:"assets/js/controllers/unitec.controller.js"}
+        ]
 
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-        link(rel="stylesheet", href="assets/css/controllers/default.controller.css")
-    body
-        ul.DS__container--assets(type="link")
-            li {{https://fonts.googleapis.com/css2?family=Roboto&display=swap"}}
-            li {{assets/css/controllers/unitec.controller.css}}
-        header
-        .container
+block content
+    .container
 
-            .UN-section__title
-                h1 Formulario de prueba system design
-                p Ingresa al portal y accede al contenido que UNITEC creó para tu aprendizaje
-            .UN-form__container
-                form(action="")
-                    .UN-form__title
-                        img(src="assets/img/un/icon-user.svg", alt="user")
-                        span Ingresa a tu cuenta
-                    fieldset
-                        .UN-form__field
-                            .UN-form__input--special
-                                +_input({
-                                    name: "correo",
-                                    id:"correo",
-                                    labelClass:"UN-form__input--label",
-                                    labelText: "Correo electrónico",
-                                    inputClass:"UN-form__input--text",
-                                    placeholder:"Ingresa tu correo",
-                                    type:"text",
-                                    value:""
-                                })
-                        .UN-form__field
-                            .UN-form__input--special
-                                +_input({
-                                    name: "correo",
-                                    id:"correo",
-                                    labelClass:"UN-form__input--label",
-                                    labelText: "Contraseña",
-                                    inputClass:"UN-form__input--text",
-                                    placeholder:"Ingresa aquí tu contraseña",
-                                    type:"password",
-                                    value:"",
-                                    icon:"UN-input__icon--password",
-                                    iconContainerClass:"UN-input__icon--container"
-                                })
-                        .UN-form__field
-                            +_select({
-                                name: "select",
-                                id:"id2",
-                                class:"UN-select",
-                                arrowClass:"UN-select__icon--arrow"
+        .UN-section__title
+            h1 Formulario de prueba system design
+            p Ingresa al portal y accede al contenido que UNITEC creó para tu aprendizaje
+        .UN-form__container
+            form(action="")
+                .UN-form__title
+                    img(src="assets/img/un/icon-user.svg", alt="user")
+                    span Ingresa a tu cuenta
+                fieldset
+                    .UN-form__field
+                        .UN-form__input--special
+                            +_input({
+                                name: "correo",
+                                id:"correo",
+                                labelClass:"UN-form__input--label",
+                                labelText: "Correo electrónico",
+                                inputClass:"UN-form__input--text",
+                                placeholder:"Ingresa tu correo",
+                                type:"text",
+                                value:""
                             })
-                                option(value="") Selecciona tu programa
-                                option(value="1") 1
-                                option(value="2") 2
-                                option(value="3") 3
+                    .UN-form__field
+                        .UN-form__input--special
+                            +_input({
+                                name: "correo",
+                                id:"correo",
+                                labelClass:"UN-form__input--label",
+                                labelText: "Contraseña",
+                                inputClass:"UN-form__input--text",
+                                placeholder:"Ingresa aquí tu contraseña",
+                                type:"password",
+                                value:"",
+                                icon:"UN-input__icon--password",
+                                iconContainerClass:"UN-input__icon--container"
+                            })
+                    .UN-form__field
+                        +_select({
+                            name: "select",
+                            id:"id2",
+                            class:"UN-select",
+                            arrowClass:"UN-select__icon--arrow"
+                        })
+                            option(value="") Selecciona tu programa
+                            option(value="1") 1
+                            option(value="2") 2
+                            option(value="3") 3
+                    
+                    .UN-form__field
+                        +_radio_check({
+                            name: "revalidar",
+                            id:"revalidar",
+                            text: "Quiero revalidar estudios <a class='UN-form__checkbox--link' href='https://www.google.com/' target='_blank'>¿Cómo aplicar?</a>",
+                            class:"UN-form__checkbox",
+                            value:"pickup",
+                            type:"checkbox"
+                        })
+
+                    .UN-form__field
+                        +_textarea({
+                            name: "txt",
+                            id:"txt_area",
+                            labelClass: "UN-form__textarea--label",
+                            text: "¿Cómo te enteraste de nuestra plataforma?",
+                            class:"UN-form__textarea",
+                            placeholder:"Ingresa aquí tu respuesta"
+                        })
                         
-                        .UN-form__field
-                            +_radio_check({
-                                name: "revalidar",
-                                id:"revalidar",
-                                text: "Quiero revalidar estudios <a class='UN-form__checkbox--link' href='https://www.google.com/' target='_blank'>¿Cómo aplicar?</a>",
-                                class:"UN-form__checkbox",
-                                value:"pickup",
-                                type:"checkbox"
-                            })
+                    .UN-form__field
+                        button.UN-form__button Enviar datos
 
-                        .UN-form__field
-                            +_textarea({
-                                name: "txt",
-                                id:"txt_area",
-                                labelClass: "UN-form__textarea--label",
-                                text: "¿Cómo te enteraste de nuestra plataforma?",
-                                class:"UN-form__textarea",
-                                placeholder:"Ingresa aquí tu respuesta"
-                            })
-                            
-                        .UN-form__field
-                            button.UN-form__button Enviar datos
-
-        footer
-            .UN-footer__social
-                .UN-footer__container
-                    .UN-footer--right
-                        p Síguenos en nuestras redes oficiales
-                    .UN-footer--left
-                        ul.UN-footer__list.UN-footer__list--social
-                            li
-                                a(href="")
-                                    img(src="assets/img/un/square3.svg", alt="")
-                            li
-                                a(href="")
-                                    img(src="assets/img/un/twitter.svg", alt="")
-                            li
-                                a(href="")
-                                    img(src="assets/img/un/square2.svg", alt="")
-                            li
-                                a(href="")
-                                    img(src="assets/img/un/youtube.svg", alt="")
-                            li
-                                a(href="")
-                                    img(src="assets/img/un/square1.svg", alt="")
-                            li
-                                a(href="")
-                                    img(src="assets/img/un/circle.svg", alt="")
-            
-            .UN-footer__container.UN-footer__info
-                .UN-footer__legal--first
-                    ul.UN-footer__list.UN-footer__list--links
+    footer
+        .UN-footer__social
+            .UN-footer__container
+                .UN-footer--right
+                    p Síguenos en nuestras redes oficiales
+                .UN-footer--left
+                    ul.UN-footer__list.UN-footer__list--social
                         li
-                            a(href="") Términos y condiciones
+                            a(href="")
+                                img(src="assets/img/un/square3.svg", alt="")
                         li
-                            a(href="") Politicas de privacidad
+                            a(href="")
+                                img(src="assets/img/un/twitter.svg", alt="")
                         li
-                            a(href="") Comunidad UNITEC®
+                            a(href="")
+                                img(src="assets/img/un/square2.svg", alt="")
                         li
-                            a(href="") Portal administrativo
-                .UN-footer__legal--last
-                    .UN-footer--right
-                        ul.UN-footer__list.UN-footer__list--security
-                            li
-                                a(href="")
-                                    img(src="assets/img/un/esr.svg", alt="")
-                            li
-                                a(href="")
-                                    img(src="assets/img/un/laureate.svg", alt="")
-                            li
-                                a(href="")
-                                    img(src="assets/img/un/amipci.svg", alt="")
-                            li
-                                a(href="")
-                                    img(src="assets/img/un/fimpes.svg", alt="")
-                            li
-                                a(href="")
-                                    img(src="assets/img/un/geotrust.svg", alt="")
-                    .UN-footer--left
-                        p Acuerdo Secretarial 142 de la SEP de la fecha 24 de Octubre de 1988. Universidad 
-                            |Tecnológica de México. Derechos Reservados 2018 UNITEC. Avenida Parque Chapultepec 
-                            |No. 56, Piso 1, Colonia El Parque. Municipio Naucalpan de Juárez, Estado de México., 
-                            |53398. Laureate Education Inc.
-        +_loader({
-            class: "loaderClassSpecial"
-        })
-        ul.DS__container--assets(type="module")
-            li {{assets/js/controllers/unitec.controller.js}}
-        script(src="assets/js/controllers/default.controller.js")
+                            a(href="")
+                                img(src="assets/img/un/youtube.svg", alt="")
+                        li
+                            a(href="")
+                                img(src="assets/img/un/square1.svg", alt="")
+                        li
+                            a(href="")
+                                img(src="assets/img/un/circle.svg", alt="")
+        
+        .UN-footer__container.UN-footer__info
+            .UN-footer__legal--first
+                ul.UN-footer__list.UN-footer__list--links
+                    li
+                        a(href="") Términos y condiciones
+                    li
+                        a(href="") Politicas de privacidad
+                    li
+                        a(href="") Comunidad UNITEC®
+                    li
+                        a(href="") Portal administrativo
+            .UN-footer__legal--last
+                .UN-footer--right
+                    ul.UN-footer__list.UN-footer__list--security
+                        li
+                            a(href="")
+                                img(src="assets/img/un/esr.svg", alt="")
+                        li
+                            a(href="")
+                                img(src="assets/img/un/laureate.svg", alt="")
+                        li
+                            a(href="")
+                                img(src="assets/img/un/amipci.svg", alt="")
+                        li
+                            a(href="")
+                                img(src="assets/img/un/fimpes.svg", alt="")
+                        li
+                            a(href="")
+                                img(src="assets/img/un/geotrust.svg", alt="")
+                .UN-footer--left
+                    p Acuerdo Secretarial 142 de la SEP de la fecha 24 de Octubre de 1988. Universidad 
+                        |Tecnológica de México. Derechos Reservados 2018 UNITEC. Avenida Parque Chapultepec 
+                        |No. 56, Piso 1, Colonia El Parque. Municipio Naucalpan de Juárez, Estado de México., 
+                        |53398. Laureate Education Inc.
+    
