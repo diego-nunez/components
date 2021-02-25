@@ -32,7 +32,13 @@ export class CustomFieldsSelect{
         return this.finalData = [finalOptions, finalKeys]
     }
 
+    setFocus(kinfOfKey, value){
+        if(kinfOfKey != "Enter" && kinfOfKey != "Escape"){
+            this.elList[value].focus();
+        }
+    }
     @State() open: boolean;
+    @State() actualFocus = 0;
 
     @Listen('click', { capture: true })
 
@@ -44,10 +50,38 @@ export class CustomFieldsSelect{
     @Listen('keydown', { target: this})
 
     handleKeyDown(ev){
-        this.elList[0].focus();
-        if (ev.key === 'ArrowDown'){
-          console.log('down arrow pressed')
+        // this.elList[this.actualFocus].focus();
+        if(this.open){
+            console.log(this.actualFocus,'ths1');
+            if (ev.key === 'ArrowDown'){
+                if(this.actualFocus < (this.totalOptions - 1)){
+                    this.actualFocus = this.actualFocus + 1
+                }else{
+                    this.actualFocus = 0
+                }
+                this.setFocus(ev.key,this.actualFocus);
+            }
+            if(ev.key === 'ArrowUp'){
+                // this.actualFocus--
+                if(this.actualFocus > 0){
+                    this.actualFocus = this.actualFocus - 1
+                    console.log('1a');
+                }else{
+                    console.log("1b");
+                    this.actualFocus = this.totalOptions - 1
+                }
+
+                this.setFocus(ev.key,this.actualFocus--);
+            }
+            if(ev.key === 'Enter'){
+                console.log('enter')
+            }
+            if(ev.key === 'Escape'){
+                this.open = false
+            }
+            
         }
+        
       }
 
     componentWillLoad(){
